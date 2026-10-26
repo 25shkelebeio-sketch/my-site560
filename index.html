@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Музей</title>
+</head>
+<body>
+  <h1>Національний музей</h1>
+
+  <h2>Відео</h2>
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/KE6D1y492rg"
+    title="Відео про музей" allowfullscreen></iframe>
+
+  <h2>Аудіо</h2>
+  <audio controls>
+    <source src="audio/music.mp3" type="audio/mpeg">
+    Ваш браузер не підтримує аудіо.
+  </audio>
+
+  <h2>Замовлення квитків</h2>
+  <form action="submit.php" method="post">
+    <label>Ім'я: <input type="text" name="username" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Дата візиту: <input type="date" name="date"></label><br>
+    <label>Тип квитка:
+      <select name="ticket">
+        <option>Дорослий</option>
+        <option>Дитячий</option>
+        <option>Студентський</option>
+      </select>
+    </label><br>
+    <label>Кількість: <input type="number" name="count" min="1" max="10" value="1"></label><br>
+    <textarea name="comment" rows="4" cols="30" placeholder="Ваш коментар..."></textarea><br>
+    <button type="submit">Замовити</button>
+  </form>
+</body>
+</html>
